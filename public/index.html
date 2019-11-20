@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>File Metadata Microservice</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            margin: 0px;
+        }
+
+        ol {
+            width: 640px;
+            text-align: left;
+            margin: 0 auto;
+        }
+
+        form {
+            background-color: coral;
+            padding: 40px;
+            width: 640px;
+            margin: 0 auto;
+            display: grid;
+            row-gap: 20px;
+        }
+
+        #fileUpload {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+
+            overflow: hidden;
+            padding: 0;
+            position: absolute !important;
+            white-space: nowrap;
+            width: 1px;
+        }
+
+        #fileUpload+label {
+            background-color: crimson;
+            color: #fff;
+            padding: 20px;
+            cursor: pointer;
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        #fileUpload+label:hover {
+            background-color: darksalmon;
+        }
+
+
+        input[type=submit] {
+
+            font-size: 1rem;
+            font-weight: bold;
+            padding: 20px;
+            display: inline-block;
+            background-color: chocolate;
+            border: none;
+            color: white;
+        }
+
+        input:hover {
+            cursor: pointer;
+            background-color: darksalmon;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>APIs and Microservices Projects - File Metadata Microservice</h1>
+    <h2>User Stories:</h2>
+    <ol>
+        <li>I can submit a form object that includes a file upload.</li>
+        <li>The from file input field has the "name" attribute set to "upfile". We rely on this in testing.</li>
+        <li>When I submit something, I will receive the file name, and size in bytes within the JSON response.</li>
+    </ol>
+    <h3>USAGE:</h3>
+    <form enctype="multipart/form-data" action="/api/upload" method="POST">
+        <input type="file" name="fileUpload" id="fileUpload" />
+        <label for="fileUpload">Upload File</label>
+
+        <input type="submit" value="SUBMIT" name="submit" />
+    </form>
+</body>
+
+</html>
